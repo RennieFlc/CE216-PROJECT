@@ -39,9 +39,9 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 System.out.println("File not found");
             }
-            //ENG-TR VOCABULARY TEST
-            System.out.println(graph.getTranslations("death", "English", "Turkish"));
-            System.out.println(graph.getTranslations("öIüm", "Turkish", "English"));
+
+
+
             //ENG-ITA
             try {
                 File file = new File("src/Dictionary/eng-ita.dict");
@@ -79,8 +79,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            //ENG-ITA Test
-            System.out.println(graph.getTranslations("abandonment", "English", "Italian"));
+
+
             //ENG-FRA
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/eng-fra.dict")); // Open the text file for reading
@@ -121,9 +121,7 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            //ENG-FRA VOCABULARY TEST
-            System.out.println(graph.getTranslations("drug", "English", "French"));
-            System.out.println(graph.getTranslations("1. remède", "French", "English"));
+
         }
 
         //Greek
@@ -165,9 +163,7 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            //ELL-ITA VOCABULARY TEST
-            System.out.println(graph.getTranslations("Αράλη", "Modern Greek", "Italian"));
-            System.out.println(graph.getTranslations("Aral", "Italian", "Modern Greek"));
+
             //ELL-SWE
             try {
                 File file = new File("src/Dictionary/ell-swe.dict");
@@ -205,7 +201,7 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Όφις", "Modern Greek", "Swedish"));
+
             //ELL-ENG
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/ell-eng.dict")); // Open the text file for reading
@@ -246,7 +242,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Άδης", "Modern Greek", "English"));
+
+
             //ELL-FRA
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/ell-fra.dict")); // Open the text file for reading
@@ -287,7 +284,7 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Μπουρκίνα Φάσο", "Modern Greek", "French"));
+
         }
 
 
@@ -370,7 +367,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Amburgo", "Italian", "German"));
+
+
             //ITA-TUR
             try {
                 File file = new File("src/Dictionary/ita-tur.dict");
@@ -408,7 +406,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("entusiasmare", "Italian", "Turkish"));
+
+
             //ITA-SWE
             try {
                 File file = new File("src/Dictionary/ita-swe.dict");
@@ -446,7 +445,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("intimidire", "Italian", "Swedish"));
+
+
             //ITA-ELL
             try {
                 File file = new File("src/Dictionary/ita-ell.dict");
@@ -484,7 +484,7 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("intimidire", "Italian", "Modern Greek"));
+
         }
 
         //GER
@@ -529,7 +529,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("eins", "German", "Italian"));
+
+
             //GER-SWE
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/deu-swe.dict")); // Open the text file for reading
@@ -570,7 +571,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Mädchenschule", "German", "Swedish"));
+
+
             //GER-FRA
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/deu-fra.dict")); // Open the text file for reading
@@ -611,7 +613,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Alpendohle", "German", "French"));
+
+
             //GER-ELL
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/deu-ell.dict")); // Open the text file for reading
@@ -652,7 +655,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Einsamkeit", "German", "Modern Greek"));
+
+
             //GER-ENG
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/deu-eng.dict")); // Open the text file for reading
@@ -693,7 +697,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Aalpässe", "German", "English"));
+
+
             //GER-TUR
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/deu-tur.dict")); // Open the text file for reading
@@ -734,7 +739,7 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Traum", "German", "Turkish"));
+
         }
 
         //TUR
@@ -779,7 +784,7 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("deve", "Turkish", "German"));
+
 
             //TUR-ENG
             try {
@@ -821,7 +826,7 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("amatör", "Turkish", "English"));
+
         }
 
         //FRA
@@ -863,6 +868,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
+
+
             //FRA-ENG
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/fra-eng.dict")); // Open the text file for reading
@@ -903,7 +910,9 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("vert", "French", "English"));
+
+
+
             //FRA-SWE
             String pathName = "src/Dictionary/fra-swe.dict";
             try {
@@ -945,7 +954,9 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Basse-Bavière", "French", "Swedish"));
+
+
+
             //FRA-ITA
             try {
                 File file = new File("src/Dictionary/fra-ita.dict");
@@ -983,7 +994,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Ain", "French", "Italian"));
+
+
             // French to German :
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/fra-deu.dict")); // Open the text file for reading
@@ -1024,7 +1036,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("chignole", "French", "German"));
+
+
             //FRENCH TO MODERN GREEK
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/fra-ell.dict")); // Open the text file for reading
@@ -1065,7 +1078,7 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Belle au bois dormant", "French", "Modern Greek"));
+
         }
 
         //SWE
@@ -1110,7 +1123,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Blod är tjockare än vatten.", "Swedish", "German"));
+
+
             //SWE TO FRENCH
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/swe-fra.dict")); // Open the text file for reading
@@ -1151,7 +1165,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Köln", "Swedish", "French"));
+
+
             // SWE TO MODERN GREEK
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/swe-ell.dict")); // Open the text file for reading
@@ -1192,7 +1207,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Köln", "Swedish", "Modern Greek"));
+
+
             // SWE TO ENGLISH
             try {
                 Scanner scanner = new Scanner(new File("src/Dictionary/swe-eng.dict")); // Open the text file for reading
@@ -1233,7 +1249,8 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Sverige", "Swedish", "English"));
+
+
             // SWEDISH TO TURKISH
             try {
                 File file = new File("src/Dictionary/swe-tur (2).dict");
@@ -1272,7 +1289,7 @@ public class Dictionary {
                 e.printStackTrace();
             }
 
-            System.out.println(graph.getTranslations("tyst", "Swedish", "Turkish"));
+
 
 
             // SWEDISH TO ITALIAN
@@ -1316,7 +1333,7 @@ public class Dictionary {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            System.out.println(graph.getTranslations("Köln", "Swedish", "Italian"));
+
         }
     } // Let's add more details
     public static void writeDictFile(){} //when we get how to read files from the website.
