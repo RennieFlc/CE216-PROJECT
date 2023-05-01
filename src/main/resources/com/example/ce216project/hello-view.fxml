@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.ce216project.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ce216project.GUI">
+    <top>
+        <VBox prefHeight="144.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <TextField alignment="TOP_CENTER" text="WELCOME TO OFFLINE DICTIONARY" />
+                <HBox alignment="TOP_CENTER" prefHeight="31.0" prefWidth="600.0">
+                    <children>
+                        <TextField fx:id="myTextField" prefHeight="38.0" prefWidth="350.0" promptText="Enter a Word" />
+                        <Button fx:id="myButton" mnemonicParsing="false" onAction="#displaySearchResults" prefHeight="38.0" prefWidth="52.0" text="Button" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="57.0" prefWidth="600.0">
+                    <children>
+                        <ChoiceBox fx:id="myChoiceBox" prefWidth="150.0" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane fx:id="myScrollpane" hbarPolicy="ALWAYS" pannable="true" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+            <content>
+                <Label fx:id="myLabel" alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="246.0" prefWidth="586.0" text="TRANSLATE" />
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

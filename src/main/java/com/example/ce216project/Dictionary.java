@@ -15,7 +15,7 @@ public class Dictionary {
         {
             //ENG-TR
             try {
-                File file = new File("CE216-proje-1/src/Dictionary/eng-tur.dict");
+                File file = new File("src/Dictionary/eng-tur.dict");
                 Scanner scanner = new Scanner(file);
                 String word = null;
                 while (scanner.hasNextLine()) {
@@ -44,7 +44,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("öIüm", "Turkish", "English"));
             //ENG-ITA
             try {
-                File file = new File("CE216-proje-1/src/Dictionary/eng-ita.dict");
+                File file = new File("src/Dictionary/eng-ita.dict");
                 Scanner scanner = new Scanner(file);
                 String word = "";
                 while (scanner.hasNextLine()) {
@@ -83,7 +83,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("abandonment", "English", "Italian"));
             //ENG-FRA
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/eng-fra.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/eng-fra.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -130,7 +130,7 @@ public class Dictionary {
         {
             //ELL-ITA
             try {
-                File file = new File("CE216-proje-1/src/Dictionary/ell-ita.dict");
+                File file = new File("src/Dictionary/ell-ita.dict");
                 Scanner scanner = new Scanner(file);
                 String word = "";
                 while (scanner.hasNextLine()) {
@@ -170,7 +170,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Aral", "Italian", "Modern Greek"));
             //ELL-SWE
             try {
-                File file = new File("CE216-proje-1/src/Dictionary/ell-swe.dict");
+                File file = new File("src/Dictionary/ell-swe.dict");
                 Scanner scanner = new Scanner(file);
                 String word = "";
                 while (scanner.hasNextLine()) {
@@ -208,7 +208,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Όφις", "Modern Greek", "Swedish"));
             //ELL-ENG
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/ell-eng.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/ell-eng.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -249,7 +249,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Άδης", "Modern Greek", "English"));
             //ELL-FRA
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/ell-fra.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/ell-fra.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -295,7 +295,7 @@ public class Dictionary {
         {
             //ITA-ENG
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/ita-eng.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/ita-eng.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -335,7 +335,7 @@ public class Dictionary {
             }
             //ITA-DEU
             try {
-                File file = new File("CE216-proje-1/src/Dictionary/ita-deu.dict");
+                File file = new File("src/Dictionary/ita-deu.dict");
                 Scanner scanner = new Scanner(file);
                 String word = "";
                 while (scanner.hasNextLine()) {
@@ -373,7 +373,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Amburgo", "Italian", "German"));
             //ITA-TUR
             try {
-                File file = new File("CE216-proje-1/src/Dictionary/ita-tur.dict");
+                File file = new File("src/Dictionary/ita-tur.dict");
                 Scanner scanner = new Scanner(file);
                 String word = "";
                 while (scanner.hasNextLine()) {
@@ -411,7 +411,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("entusiasmare", "Italian", "Turkish"));
             //ITA-SWE
             try {
-                File file = new File("CE216-proje-1/src/Dictionary/ita-swe.dict");
+                File file = new File("src/Dictionary/ita-swe.dict");
                 Scanner scanner = new Scanner(file);
                 String word = "";
                 while (scanner.hasNextLine()) {
@@ -449,7 +449,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("intimidire", "Italian", "Swedish"));
             //ITA-ELL
             try {
-                File file = new File("CE216-proje-1/src/Dictionary/ita-ell.dict");
+                File file = new File("src/Dictionary/ita-ell.dict");
                 Scanner scanner = new Scanner(file);
                 String word = "";
                 while (scanner.hasNextLine()) {
@@ -491,7 +491,7 @@ public class Dictionary {
         {
             //GER-ITA
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/deu-ita.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/deu-ita.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -532,7 +532,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("eins", "German", "Italian"));
             //GER-SWE
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/deu-swe.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/deu-swe.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -573,7 +573,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Mädchenschule", "German", "Swedish"));
             //GER-FRA
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/deu-fra.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/deu-fra.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -614,7 +614,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Alpendohle", "German", "French"));
             //GER-ELL
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/deu-ell.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/deu-ell.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -655,7 +655,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Einsamkeit", "German", "Modern Greek"));
             //GER-ENG
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/deu-eng.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/deu-eng.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -696,7 +696,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Aalpässe", "German", "English"));
             //GER-TUR
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/deu-tur.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/deu-tur.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -741,7 +741,7 @@ public class Dictionary {
         {
             //TUR-GER
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/tur-deu.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/tur-deu.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -783,7 +783,7 @@ public class Dictionary {
 
             //TUR-ENG
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/tur-eng.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/tur-eng.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -828,7 +828,7 @@ public class Dictionary {
         {
             //FRA-TUR
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/fra-tur.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/fra-tur.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -865,7 +865,7 @@ public class Dictionary {
             }
             //FRA-ENG
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/fra-eng.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/fra-eng.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -905,7 +905,7 @@ public class Dictionary {
             }
             System.out.println(graph.getTranslations("vert", "French", "English"));
             //FRA-SWE
-            String pathName = "CE216-proje-1/src/Dictionary/fra-swe.dict";
+            String pathName = "src/Dictionary/fra-swe.dict";
             try {
                 Scanner scanner = new Scanner(new File(pathName)); // Open the text file for reading
                 String word = "";
@@ -948,7 +948,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Basse-Bavière", "French", "Swedish"));
             //FRA-ITA
             try {
-                File file = new File("CE216-proje-1/src/Dictionary/fra-ita.dict");
+                File file = new File("src/Dictionary/fra-ita.dict");
                 Scanner scanner = new Scanner(file);
                 String word = "";
                 while (scanner.hasNextLine()) {
@@ -986,7 +986,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Ain", "French", "Italian"));
             // French to German :
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/fra-deu.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/fra-deu.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -1027,7 +1027,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("chignole", "French", "German"));
             //FRENCH TO MODERN GREEK
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/fra-ell.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/fra-ell.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -1072,7 +1072,7 @@ public class Dictionary {
         {
             //SWE TO GER
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/swe-deu.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/swe-deu.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -1113,7 +1113,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Blod är tjockare än vatten.", "Swedish", "German"));
             //SWE TO FRENCH
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/swe-fra.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/swe-fra.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -1154,7 +1154,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Köln", "Swedish", "French"));
             // SWE TO MODERN GREEK
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/swe-ell.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/swe-ell.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -1195,7 +1195,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Köln", "Swedish", "Modern Greek"));
             // SWE TO ENGLISH
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/swe-eng.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/swe-eng.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
@@ -1236,7 +1236,7 @@ public class Dictionary {
             System.out.println(graph.getTranslations("Sverige", "Swedish", "English"));
             // SWEDISH TO TURKISH
             try {
-                File file = new File("CE216-proje-1/src/Dictionary/swe-tur (2).dict");
+                File file = new File("src/Dictionary/swe-tur (2).dict");
                 Scanner scanner = new Scanner(file);
                 String word = "";
                 while (scanner.hasNextLine()) {
@@ -1278,7 +1278,7 @@ public class Dictionary {
             // SWEDISH TO ITALIAN
 
             try {
-                Scanner scanner = new Scanner(new File("CE216-proje-1/src/Dictionary/swe-ita.dict")); // Open the text file for reading
+                Scanner scanner = new Scanner(new File("src/Dictionary/swe-ita.dict")); // Open the text file for reading
                 String word = "";
                 ArrayList<String> translation = new ArrayList<>();
 
