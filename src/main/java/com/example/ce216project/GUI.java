@@ -350,7 +350,11 @@ public class GUI implements Initializable {
         stage.show();
     }
 
-    public static void displayEditWordForm() {
+    public static void displayEditWordForm(String sourceLan, String targetLan, String sourceWord, String targetWord) {
+        //List<String> translationsger = Dictionary.graph.getTranslations(getWord(),getLanguage(),"German");
+        System.out.print("Write source language:");
+
+
 
     }
 
