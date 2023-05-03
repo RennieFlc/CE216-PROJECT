@@ -46,7 +46,7 @@ public class GUI implements Initializable {
     }
     public String getWord()
     {
-        searchWord=myTextField.getText();
+        searchWord=myTextField.getText().toLowerCase();
         return searchWord;
     }
 
@@ -256,7 +256,7 @@ public class GUI implements Initializable {
             System.out.println(sb.toString());
             myLabel.setText(sb.toString());
         }
-        if (getLanguage().equals("French"))
+        if (getLanguage().equalsIgnoreCase("French"))
         {
             System.out.println(Dictionary.graph.getTranslations(getWord(),getLanguage(),"Turkish"));
             List<String> translationstr = Dictionary.graph.getTranslations(getWord(),getLanguage(),"Turkish");
@@ -297,7 +297,7 @@ public class GUI implements Initializable {
             System.out.println(sb.toString());
             myLabel.setText(sb.toString());
         }
-        if (getLanguage().equals("German"))
+        if (getLanguage().equalsIgnoreCase("German"))
         {
             List<String> translationstr = Dictionary.graph.getTranslations(getWord(),getLanguage(),"Turkish");
             List<String> translationseng = Dictionary.graph.getTranslations(getWord(),getLanguage(),"English");
