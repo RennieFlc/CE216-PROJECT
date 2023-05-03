@@ -49,12 +49,21 @@
                      </font></Button>
                     </children>
                 </HBox>
-                <HBox prefHeight="57.0" prefWidth="600.0">
+                <HBox prefHeight="62.0" prefWidth="600.0">
                     <children>
-                        <ChoiceBox fx:id="myChoiceBox" prefWidth="150.0" />
-                  <Button id="editButton" fx:id="editButton" mnemonicParsing="false" onAction="#displayEditWordForm" text="Edit" />
-                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#displayAddWordForm" text="Add" />
-                  <Button mnemonicParsing="false" onAction="#displayHelpMenu" text="Help" />
+                        <ChoiceBox fx:id="myChoiceBox" prefHeight="26.0" prefWidth="150.0" />
+                  <Button id="editButton" fx:id="editButton" mnemonicParsing="false" onAction="#displayEditWordForm" prefHeight="26.0" prefWidth="56.0" text="Edit">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#displayAddWordForm" prefHeight="26.0" prefWidth="51.0" text="Add">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#displayHelpMenu" prefHeight="26.0" prefWidth="50.0" text="Help">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font></Button>
                     </children>
                 </HBox>
             </children>
