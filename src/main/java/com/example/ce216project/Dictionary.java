@@ -865,6 +865,16 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+                try {
+                    FileOutputStream fileOut = new FileOutputStream("deu-eng.ser");
+                    ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                    out.writeObject(this);
+                    out.close();
+                    fileOut.close();
+                    System.out.println("Serialized data is saved in deu-eng.ser");
+                } catch (IOException i) {
+                    i.printStackTrace();
+                }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -907,6 +917,16 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+                try {
+                    FileOutputStream fileOut = new FileOutputStream("deu-tur.ser");
+                    ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                    out.writeObject(this);
+                    out.close();
+                    fileOut.close();
+                    System.out.println("Serialized data is saved in deu-tur.ser");
+                } catch (IOException i) {
+                    i.printStackTrace();
+                }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -952,6 +972,16 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+                try {
+                    FileOutputStream fileOut = new FileOutputStream("tur-deu.ser");
+                    ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                    out.writeObject(this);
+                    out.close();
+                    fileOut.close();
+                    System.out.println("Serialized data is saved in tur-deu.ser");
+                } catch (IOException i) {
+                    i.printStackTrace();
+                }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -994,6 +1024,16 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+                try {
+                    FileOutputStream fileOut = new FileOutputStream("tur-eng.ser");
+                    ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                    out.writeObject(this);
+                    out.close();
+                    fileOut.close();
+                    System.out.println("Serialized data is saved in tur-eng.ser");
+                } catch (IOException i) {
+                    i.printStackTrace();
+                }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -1032,6 +1072,17 @@ public class Dictionary implements Serializable {
                         translation.add(turkishWord.toString().trim());
                     }
 
+                    try {
+                        FileOutputStream fileOut = new FileOutputStream("fra-tur.ser");
+                        ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                        out.writeObject(this);
+                        out.close();
+                        fileOut.close();
+                        System.out.println("Serialized data is saved in fra-tur.ser");
+                    } catch (IOException i) {
+                        i.printStackTrace();
+                    }
+
 
                 }
 
@@ -1050,7 +1101,7 @@ public class Dictionary implements Serializable {
                 while (scanner.hasNextLine()) {
                     String line = scanner.nextLine();
 
-                    if (line.endsWith("/")) { //German word
+                    if (line.endsWith("/")) { //French word
                         if (!word.isEmpty()) {
                             // If word is not empty, add the previous word and translation to the graph
 
@@ -1078,6 +1129,16 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+                try {
+                    FileOutputStream fileOut = new FileOutputStream("fra-eng.ser");
+                    ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                    out.writeObject(this);
+                    out.close();
+                    fileOut.close();
+                    System.out.println("Serialized data is saved in fra-eng.ser");
+                } catch (IOException i) {
+                    i.printStackTrace();
+                }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -1122,6 +1183,16 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+                try {
+                    FileOutputStream fileOut = new FileOutputStream("fra-swe.ser");
+                    ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                    out.writeObject(this);
+                    out.close();
+                    fileOut.close();
+                    System.out.println("Serialized data is saved in fra-swe.ser");
+                } catch (IOException i) {
+                    i.printStackTrace();
+                }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -1162,6 +1233,16 @@ public class Dictionary implements Serializable {
                     }
                 }
                 scanner.close();
+                try {
+                    FileOutputStream fileOut = new FileOutputStream("fra-ita.ser");
+                    ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                    out.writeObject(this);
+                    out.close();
+                    fileOut.close();
+                    System.out.println("Serialized data is saved in fra-ita.ser");
+                } catch (IOException i) {
+                    i.printStackTrace();
+                }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
