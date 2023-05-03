@@ -365,6 +365,18 @@ public class GUI implements Initializable {
 
     }
 
+    public void displayHelpMenu (ActionEvent event) throws Exception {
+
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("help.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
+        stage.setScene(scene);
+        stage.show();
+
+
+
+    }
+
     public static void displayDeleteWordConfirmation() {
 
     }
