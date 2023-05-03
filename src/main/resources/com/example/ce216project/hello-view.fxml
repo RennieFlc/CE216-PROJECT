@@ -35,7 +35,7 @@
                         </Menu>
                     </menus>
                 </MenuBar>
-                <TextField alignment="TOP_CENTER" text="WELCOME TO OFFLINE DICTIONARY" editable="false" />
+                <TextField alignment="TOP_CENTER" text="WELCOME TO OFFLINE DICTIONARY" editable="false" style="-fx-focus-color: transparent;" />
                 <HBox alignment="TOP_CENTER" prefHeight="31.0" prefWidth="600.0">
                     <children>
                         <TextField fx:id="myTextField" prefHeight="38.0" prefWidth="350.0" promptText="Enter a Word" />
