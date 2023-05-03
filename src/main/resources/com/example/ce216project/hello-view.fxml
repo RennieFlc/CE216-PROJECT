@@ -45,6 +45,8 @@
                 <HBox prefHeight="57.0" prefWidth="600.0">
                     <children>
                         <ChoiceBox fx:id="myChoiceBox" prefWidth="150.0" />
+                  <Button mnemonicParsing="false" text="edit" />
+                  <Button mnemonicParsing="false" text="add" />
                     </children>
                 </HBox>
             </children>
