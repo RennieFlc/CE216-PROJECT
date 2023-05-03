@@ -53,7 +53,7 @@
     <center>
         <ScrollPane fx:id="myScrollpane" hbarPolicy="ALWAYS" pannable="true" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
             <content>
-                <Label fx:id="myLabel" alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="246.0" prefWidth="586.0" text="TRANSLATE" />
+                <Label fx:id="myLabel" alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="638.0" prefWidth="586.0" text="TRANSLATE" />
             </content>
         </ScrollPane>
     </center>
