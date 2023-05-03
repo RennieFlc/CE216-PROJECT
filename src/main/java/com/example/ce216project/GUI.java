@@ -22,6 +22,8 @@ public class GUI implements Initializable {
     @FXML
     public Button myButton;
     @FXML
+    public Button editButton;
+    @FXML
     private TextField myTextField;
     @FXML
     private ScrollPane myScrollpane;
@@ -350,8 +352,13 @@ public class GUI implements Initializable {
         stage.show();
     }
 
-    public static void displayEditWordForm(String sourceLan, String targetLan, String sourceWord, String targetWord) {
+    public void displayEditWordForm(ActionEvent event)throws Exception {
         //List<String> translationsger = Dictionary.graph.getTranslations(getWord(),getLanguage(),"German");
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("edit.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
+        stage.setScene(scene);
+        stage.show();
         System.out.print("Write source language:");
 
 
