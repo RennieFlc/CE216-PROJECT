@@ -2,10 +2,14 @@ package com.example.ce216project;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -21,6 +25,8 @@ public class GUI implements Initializable {
     private TextField myTextField;
     @FXML
     private ScrollPane myScrollpane;
+    @FXML
+    public Button addButton;
 
     public String[]language={"Turkish","English","French","Italian","Swedish","German","Modern Greek"};
     public static String mainLanguage;
@@ -335,8 +341,13 @@ public class GUI implements Initializable {
         }
     }
 
-    public static void displayAddWordForm() {
-
+    public void displayAddWordForm(ActionEvent event)throws IOException
+    {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("add.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public static void displayEditWordForm() {

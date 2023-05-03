@@ -45,8 +45,8 @@
                 <HBox prefHeight="57.0" prefWidth="600.0">
                     <children>
                         <ChoiceBox fx:id="myChoiceBox" prefWidth="150.0" />
-                  <Button mnemonicParsing="false" text="edit" />
-                  <Button mnemonicParsing="false" text="add" />
+                  <Button id="editButton" mnemonicParsing="false" text="Edit" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#displayAddWordForm" text="add" />
                     </children>
                 </HBox>
             </children>
@@ -55,7 +55,7 @@
     <center>
         <ScrollPane fx:id="myScrollpane" hbarPolicy="ALWAYS" pannable="true" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
             <content>
-                <Label fx:id="myLabel" alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="638.0" prefWidth="586.0" text="TRANSLATE" />
+                <Label fx:id="myLabel" alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="909.0" prefWidth="586.0" text="TRANSLATE" />
             </content>
         </ScrollPane>
     </center>
