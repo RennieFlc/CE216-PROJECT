@@ -14,7 +14,7 @@ public class Graph {
 
     public void addWord(String word,String mainlanguage, String language, ArrayList<String> translations) {
         // create or retrieve the English node
-        String key = word +"-"+mainlanguage;
+        String key = word + "-" + mainlanguage;
         Node mainnode = nodes.getOrDefault(key, new Node(word, mainlanguage));
         nodes.put(key, mainnode);
 
