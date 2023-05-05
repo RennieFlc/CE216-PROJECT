@@ -43,7 +43,7 @@
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="36.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="70.0" />
                </children>
             </HBox>
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" text="Add" />
+            <Button fx:id="saveButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#enterAddWorForm" text="save" />
          </children>
       </VBox>
    </children>
