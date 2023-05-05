@@ -1071,6 +1071,7 @@ public class Dictionary implements Serializable {
                         }
                         translation.add(turkishWord.toString().trim());
                     }
+                    scanner.close();
 
                     try {
                         FileOutputStream fileOut = new FileOutputStream("fra-tur.ser");
