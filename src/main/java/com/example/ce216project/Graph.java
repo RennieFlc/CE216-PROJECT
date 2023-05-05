@@ -1,10 +1,17 @@
 package com.example.ce216project;
 
 import java.io.Serializable;
+import java.io.EOFException ;
+import java.io.IOException ;
+import java.io.ObjectInputStream ;
+import java.io.ObjectOutputStream ;
+import java.nio.file.Files ;
+import java.nio.file.Paths ;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Graph {
+public class Graph implements Serializable {
 
     private HashMap<String, Node> nodes;
 
@@ -12,7 +19,7 @@ public class Graph {
         this.nodes = new HashMap<>();
     }
 
-    public void addWord(String word,String mainlanguage, String language, ArrayList<String> translations) {
+    public void addWord(String word, String mainlanguage, String language, ArrayList<String> translations) {
         // create or retrieve the English node
         String key = word + "-" + mainlanguage;
         Node mainnode = nodes.getOrDefault(key, new Node(word, mainlanguage));
@@ -27,6 +34,7 @@ public class Graph {
             mainnode.addNeighbor(translationNode);
             translationNode.addNeighbor(mainnode);
         }
+
     }
 
     public ArrayList<String> getTranslations(String word, String mainlanguage, String language) {

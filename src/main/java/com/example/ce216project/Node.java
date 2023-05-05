@@ -1,8 +1,9 @@
 package com.example.ce216project;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Node {
+public class Node implements Serializable {
     private String word;
     private String language;
     private ArrayList<Node> neighbors;
