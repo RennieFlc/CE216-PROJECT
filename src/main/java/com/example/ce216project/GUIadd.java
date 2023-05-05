@@ -20,7 +20,6 @@ public class GUIadd implements Initializable {
 
     public String[]language={"Turkish","English","French","Italian","Swedish","German","Modern Greek"};
     public static String mainLanguage;
-    public String searchWord;
     public static Graph graph;
     public static Dictionary dictionary;
 
