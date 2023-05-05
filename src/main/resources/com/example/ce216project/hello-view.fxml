@@ -17,7 +17,7 @@
     <top>
         <VBox prefHeight="144.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
-                <MenuBar>
+                <MenuBar blendMode="SRC_ATOP">
                     <menus>
                         <Menu mnemonicParsing="false" text="File">
                             <items>
@@ -36,31 +36,31 @@
                         </Menu>
                     </menus>
                 </MenuBar>
-                <TextField alignment="TOP_CENTER" editable="false" style="-fx-focus-color: transparent;" text="WELCOME TO OFFLINE DICTIONARY">
+                <TextField alignment="TOP_CENTER" blendMode="MULTIPLY" editable="false" style="-fx-focus-color: transparent;" text="WELCOME TO OFFLINE DICTIONARY">
                <font>
                   <Font name="Berlin Sans FB" size="14.0" />
                </font></TextField>
                 <HBox alignment="TOP_CENTER" prefHeight="31.0" prefWidth="600.0">
                     <children>
                         <TextField fx:id="myTextField" prefHeight="31.0" prefWidth="375.0" promptText="Enter a Word" />
-                        <Button fx:id="myButton" mnemonicParsing="false" onAction="#displaySearchResults" prefHeight="38.0" prefWidth="52.0" text="OK" textFill="#4a0756">
+                        <Button fx:id="myButton" blendMode="RED" mnemonicParsing="false" onAction="#displaySearchResults" prefHeight="38.0" prefWidth="52.0" text="OK" textFill="#4a0756">
                      <font>
                         <Font name="Calibri" size="14.0" />
                      </font></Button>
                     </children>
                 </HBox>
-                <HBox prefHeight="62.0" prefWidth="600.0">
+                <HBox blendMode="GREEN" prefHeight="62.0" prefWidth="600.0">
                     <children>
-                        <ChoiceBox fx:id="myChoiceBox" prefHeight="26.0" prefWidth="150.0" />
-                  <Button id="editButton" fx:id="editButton" mnemonicParsing="false" onAction="#displayEditWordForm" prefHeight="26.0" prefWidth="56.0" text="Edit">
+                        <ChoiceBox fx:id="myChoiceBox" blendMode="GREEN" prefHeight="26.0" prefWidth="150.0" />
+                  <Button id="editButton" fx:id="editButton" blendMode="GREEN" mnemonicParsing="false" onAction="#displayEditWordForm" prefHeight="26.0" prefWidth="56.0" text="Edit">
                      <font>
                         <Font name="Calibri" size="14.0" />
                      </font></Button>
-                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#displayAddWordForm" prefHeight="26.0" prefWidth="51.0" text="Add">
+                  <Button fx:id="addButton" blendMode="GREEN" mnemonicParsing="false" onAction="#displayAddWordForm" prefHeight="26.0" prefWidth="51.0" text="Add">
                      <font>
                         <Font name="Calibri" size="14.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#displayHelpMenu" prefHeight="26.0" prefWidth="50.0" text="Help">
+                  <Button blendMode="GREEN" mnemonicParsing="false" onAction="#displayHelpMenu" prefHeight="26.0" prefWidth="50.0" text="Help">
                      <font>
                         <Font name="Calibri" size="14.0" />
                      </font></Button>
