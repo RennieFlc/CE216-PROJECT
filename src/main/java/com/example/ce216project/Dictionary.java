@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Dictionary {
 
-    public Language lang; // Not so sure if a language has a dictionary or dictionary has a language
+    public Language lang;
     public static Graph graph = new Graph();
     public void readDictFile()
     {
@@ -1338,7 +1338,7 @@ public class Dictionary {
             }
 
         }
-    } // Let's add more details
+    }
     public static void writeDictFile(){} //when we get how to read files from the website.
 
     public static String searchWord(String word, Language lang){
