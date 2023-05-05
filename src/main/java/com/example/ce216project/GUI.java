@@ -46,11 +46,17 @@ public class GUI implements Initializable {
         this.mainLanguage = mainLanguage;
         return mainLanguage;
     }
-    public String getWord()
-    {
-        searchWord=myTextField.getText().toLowerCase();
-        return searchWord;
+    public String getWord() {
+        searchWord = myTextField.getText().toLowerCase();
+        if (searchWord.isEmpty()) {
+            // Return null or empty string, or show an error message
+            return null;
+        } else {
+            return searchWord;
+        }
     }
+
+
 
     public static void displayManual() {
 
