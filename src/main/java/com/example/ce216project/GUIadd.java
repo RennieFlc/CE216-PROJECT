@@ -54,6 +54,7 @@ public class GUIadd implements Initializable {
         if (getLanguage().equals("English"))
         {
             //graph.addWord(wordTextField.getText(), "English", "Turkish", addtext1.getText());
+            //
 
 
         }
