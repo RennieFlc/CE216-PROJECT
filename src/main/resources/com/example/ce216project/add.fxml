@@ -43,7 +43,17 @@
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="36.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="70.0" />
                </children>
             </HBox>
-            <Button fx:id="saveButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#enterAddWorForm" text="save" />
+            <HBox prefHeight="32.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="addtext5" prefHeight="26.0" prefWidth="287.0" visible="false" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="addtext6" prefHeight="26.0" prefWidth="285.0" visible="false" />
+               </children>
+            </HBox>
+            <Button fx:id="saveButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#enterAddWorForm" text="save" visible="false" />
          </children>
       </VBox>
    </children>

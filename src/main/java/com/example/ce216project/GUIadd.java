@@ -28,6 +28,10 @@ public class GUIadd implements Initializable {
     public TextField addtext3;
     @FXML
     public TextField addtext4;
+    @FXML
+    public TextField addtext5;
+    @FXML
+    public TextField addtext6;
 
     @FXML
     public Button saveButton;
@@ -53,26 +57,34 @@ public class GUIadd implements Initializable {
         addtext2.setVisible(true);
         addtext3.setVisible(true);
         addtext4.setVisible(true);
+        addtext5.setVisible(true);
+        addtext6.setVisible(true);
+        saveButton.setVisible(true);
     }
 
     public void enterAddWorForm(ActionEvent event) throws  IOException {
         if (getLanguage().equals("English")) {
-            //graph.addWord(wordTextField.getText(), "English", "Turkish", addtext1.getText());
             System.out.println(wordTextField.getText());
             ArrayList<String>turkishtranslate = new ArrayList<>();
             ArrayList<String>germantranslate = new ArrayList<>();
             ArrayList<String>moderngtranslate = new ArrayList<>();
             ArrayList<String>swedishtranslate = new ArrayList<>();
+            ArrayList<String>frenchtranslate = new ArrayList<>();
+            ArrayList<String>italiantranslate = new ArrayList<>();
             turkishtranslate.add(addtext1.getText());
             germantranslate.add(addtext2.getText());
             moderngtranslate.add(addtext3.getText());
             swedishtranslate.add(addtext4.getText());
+            frenchtranslate.add(addtext5.getText());
+            italiantranslate.add(addtext6.getText());
 
             if (saveButton.isDisabled() == false) {
                 Dictionary.graph.addWord(wordTextField.getText(),"English","Turkish",turkishtranslate);
                 Dictionary.graph.addWord(wordTextField.getText(),"English","German",germantranslate);
                 Dictionary.graph.addWord(wordTextField.getText(),"English","Modern Greek",moderngtranslate);
                 Dictionary.graph.addWord(wordTextField.getText(),"English","Swedish",swedishtranslate);
+                Dictionary.graph.addWord(wordTextField.getText(),"English","French",frenchtranslate);
+                Dictionary.graph.addWord(wordTextField.getText(),"English","Italian",italiantranslate);
             }
         }
         if (getLanguage().equals("Turkish")) {
