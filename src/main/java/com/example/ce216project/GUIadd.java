@@ -62,17 +62,17 @@ public class GUIadd implements Initializable {
             ArrayList<String>turkishtranslate = new ArrayList<>();
             ArrayList<String>germantranslate = new ArrayList<>();
             ArrayList<String>moderngtranslate = new ArrayList<>();
-            ArrayList<String>sweedishtranslate = new ArrayList<>();
+            ArrayList<String>swedishtranslate = new ArrayList<>();
             turkishtranslate.add(addtext1.getText());
             germantranslate.add(addtext2.getText());
             moderngtranslate.add(addtext3.getText());
-            sweedishtranslate.add(addtext4.getText());
+            swedishtranslate.add(addtext4.getText());
 
             if (saveButton.isDisabled() == false) {
                 Dictionary.graph.addWord(wordTextField.getText(),"English","Turkish",turkishtranslate);
                 Dictionary.graph.addWord(wordTextField.getText(),"English","German",germantranslate);
                 Dictionary.graph.addWord(wordTextField.getText(),"English","Modern Greek",moderngtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"English","Sweedish",sweedishtranslate);
+                Dictionary.graph.addWord(wordTextField.getText(),"English","Swedish",swedishtranslate);
             }
         }
         if (getLanguage().equals("Turkish")) {
