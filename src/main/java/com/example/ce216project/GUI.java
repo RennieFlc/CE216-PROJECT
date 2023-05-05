@@ -28,6 +28,25 @@ public class GUI implements Initializable {
     @FXML
     private ScrollPane myScrollpane;
 
+    //edit part
+    @FXML
+    public TextField editTextField;
+
+    @FXML
+    public ChoiceBox editChoiceBox;
+
+    @FXML
+    public Button editShowTranslationsButton;
+
+    @FXML
+    public TextField editNewWordTextField;
+
+    @FXML
+    public Button editEditButton;
+
+    @FXML
+    public ScrollPane editScrollPane;
+
     public String[]language={"Turkish","English","French","Italian","Swedish","German","Modern Greek"};
     public static String mainLanguage;
     public String searchWord;

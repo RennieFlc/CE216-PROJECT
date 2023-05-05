@@ -1,12 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="61.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="editTextField" prefHeight="25.0" prefWidth="207.0" promptText="Enter the word you want to edit..." />
+                  <ChoiceBox fx:id="editChoiceBox" prefWidth="150.0" />
+                  <Button fx:id="editShowTranslationsButton" mnemonicParsing="false" text="Show Translations" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="editNewWordTextField" prefHeight="25.0" prefWidth="209.0" promptText="Enter new word..." />
+                  <Button fx:id="editEditButton" mnemonicParsing="false" text="Edit" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <right>
+      <ScrollPane prefHeight="239.0" prefWidth="601.0" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="227.0" prefWidth="601.0">
+               <children>
+                  <Label fx:id="editTranslationsLabel" layoutX="273.0" layoutY="6.0" text="Translations" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </right>
+</BorderPane>
