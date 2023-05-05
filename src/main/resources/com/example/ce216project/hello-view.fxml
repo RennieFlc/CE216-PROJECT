@@ -8,6 +8,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -35,6 +36,9 @@
                             </items>
                         </Menu>
                     </menus>
+               <effect>
+                  <SepiaTone />
+               </effect>
                 </MenuBar>
                 <TextField alignment="TOP_CENTER" blendMode="MULTIPLY" editable="false" style="-fx-focus-color: transparent;" text="WELCOME TO OFFLINE DICTIONARY">
                <font>
@@ -43,7 +47,7 @@
                 <HBox alignment="TOP_CENTER" prefHeight="31.0" prefWidth="600.0">
                     <children>
                         <TextField fx:id="myTextField" prefHeight="31.0" prefWidth="375.0" promptText="Enter a Word" />
-                        <Button fx:id="myButton" blendMode="RED" mnemonicParsing="false" onAction="#displaySearchResults" prefHeight="38.0" prefWidth="52.0" text="OK" textFill="#4a0756">
+                        <Button fx:id="myButton" blendMode="GREEN" mnemonicParsing="false" onAction="#displaySearchResults" prefHeight="38.0" prefWidth="52.0" text="OK" textFill="#4a0756">
                      <font>
                         <Font name="Calibri" size="14.0" />
                      </font></Button>
