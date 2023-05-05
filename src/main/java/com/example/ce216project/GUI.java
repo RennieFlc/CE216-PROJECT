@@ -28,6 +28,8 @@ public class GUI implements Initializable {
     @FXML
     private ScrollPane myScrollpane;
 
+
+
     public String[]language={"Turkish","English","French","Italian","Swedish","German","Modern Greek"};
     public static String mainLanguage;
     public String searchWord;
@@ -363,7 +365,6 @@ public class GUI implements Initializable {
         Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         stage.setScene(scene);
         stage.show();
-        System.out.print("Write source language:");
 
 
 
