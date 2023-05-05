@@ -17,6 +17,16 @@ public class GUIadd implements Initializable {
     public ChoiceBox<String> myChoiceBox;
     @FXML
     public Button addButton;
+    @FXML
+    public TextField wordTextField;
+    @FXML
+    public TextField addtext1;
+    @FXML
+    public TextField addtext2;
+    @FXML
+    public TextField addtext3;
+    @FXML
+    public TextField addtext4;
 
     public String[]language={"Turkish","English","French","Italian","Swedish","German","Modern Greek"};
     public static String mainLanguage;
@@ -36,9 +46,16 @@ public class GUIadd implements Initializable {
     }
     public void displayAddWordForm(ActionEvent event)throws IOException
     {
+        addtext1.setVisible(true);
+        addtext2.setVisible(true);
+        addtext3.setVisible(true);
+        addtext4.setVisible(true);
+
         if (getLanguage().equals("English"))
         {
-            System.out.println("english");
+            //graph.addWord(wordTextField.getText(), "English", "Turkish", addtext1.getText());
+
+
         }
         if (getLanguage().equals("Turkish"))
         {}

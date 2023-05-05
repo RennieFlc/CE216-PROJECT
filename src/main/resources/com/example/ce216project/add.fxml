@@ -14,35 +14,36 @@
          <children>
             <HBox prefHeight="110.0" prefWidth="600.0">
                <children>
-                  <TextField prefHeight="26.0" prefWidth="391.0" />
+                  <TextField fx:id="wordTextField" prefHeight="26.0" prefWidth="391.0" />
                   <ChoiceBox fx:id="myChoiceBox" prefWidth="150.0" />
                   <Button fx:id="addButton" mnemonicParsing="false" onAction="#displayAddWordForm" prefHeight="26.0" prefWidth="58.0" text="Add" />
                </children>
             </HBox>
             <HBox prefHeight="23.0" prefWidth="590.0">
                <children>
-                  <TextField prefHeight="26.0" prefWidth="414.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="39.0" stroke="BLACK" strokeType="INSIDE" width="67.0" />
+                  <TextField fx:id="addtext1" prefHeight="26.0" prefWidth="414.0" visible="false" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="39.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="67.0" />
                </children>
             </HBox>
             <HBox prefHeight="23.0" prefWidth="600.0">
                <children>
-                  <TextField prefHeight="26.0" prefWidth="414.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="37.0" stroke="BLACK" strokeType="INSIDE" width="68.0" />
+                  <TextField fx:id="addtext2" prefHeight="26.0" prefWidth="414.0" visible="false" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="37.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="68.0" />
                </children>
             </HBox>
             <HBox prefHeight="28.0" prefWidth="600.0">
                <children>
-                  <TextField prefHeight="26.0" prefWidth="413.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="38.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+                  <TextField fx:id="addtext3" prefHeight="26.0" prefWidth="413.0" visible="false" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="38.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="70.0" />
                </children>
             </HBox>
             <HBox prefHeight="19.0" prefWidth="600.0">
                <children>
-                  <TextField prefHeight="26.0" prefWidth="413.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="36.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+                  <TextField fx:id="addtext4" prefHeight="26.0" prefWidth="413.0" visible="false" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="36.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="70.0" />
                </children>
             </HBox>
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" text="Add" />
          </children>
       </VBox>
    </children>
