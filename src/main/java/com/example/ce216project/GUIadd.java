@@ -54,12 +54,12 @@ public class GUIadd implements Initializable {
     public String[]language={"Turkish","English","French","Italian","Swedish","German","Modern Greek"};
 
     Image imageTurkish = new Image("com/example/ce216project/Flag_of_Turkey.svg.png");
-    Image imageGerman = new Image("com/example/ce216project/640px-Flag_of_Germany.svg.png");
+    Image imageGerman = new Image("com/example/ce216project/Flag_of_Germany.svg.png");
     Image imageItalian = new Image("com/example/ce216project/Flag_of_Italy.svg.png");
     Image imageGreek = new Image("com/example/ce216project/Flag_of_Greece.svg.png");
-    Image imageEnglish = new Image("com/example/ce216project/Flag_of_the_United_Kingdom_(1-2).svg.png");
+    Image imageEnglish = new Image("com/example/ce216project/Flag_of_the_United_Kingdom_(3-5).svg.png");
     Image imageSwedish = new Image("com/example/ce216project/Flag_of_Sweden.svg.png");
-    Image imageFrench = new Image("com/example/ce216project/illustration-france-flag_53876-27099.png");
+    Image imageFrench = new Image("com/example/ce216project/Flag_of_France.svg.png");
     public static String mainLanguage;
     public static Graph graph;
     public static Dictionary dictionary;
