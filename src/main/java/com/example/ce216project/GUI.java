@@ -27,8 +27,6 @@ public class GUI implements Initializable {
     private TextField myTextField;
     @FXML
     private ScrollPane myScrollpane;
-    @FXML
-    public Button addButton;
 
     public String[]language={"Turkish","English","French","Italian","Swedish","German","Modern Greek"};
     public static String mainLanguage;
@@ -62,7 +60,7 @@ public class GUI implements Initializable {
 
     }
 
-    public void displaySearchResults(ActionEvent event) {
+    public  void displaySearchResults(ActionEvent event) {
         if (getLanguage().equals("English"))
         {
             List<String> translationstr = Dictionary.graph.getTranslations(getWord(),getLanguage(),"Turkish");
