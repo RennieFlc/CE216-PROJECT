@@ -31,7 +31,7 @@
       </VBox>
    </top>
    <right>
-      <ScrollPane prefHeight="239.0" prefWidth="601.0" BorderPane.alignment="CENTER">
+      <ScrollPane fx:id="editScrollPane" prefHeight="239.0" prefWidth="601.0" BorderPane.alignment="CENTER">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="227.0" prefWidth="601.0">
                <children>
