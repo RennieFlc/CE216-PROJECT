@@ -37,6 +37,25 @@ public class Graph implements Serializable {
 
     }
 
+    public void deleteWord(String word, String mainlanguage, String language,ArrayList<String> translations) {
+        // create or retrieve the English node
+        String key = word + "-" + mainlanguage;
+        Node mainnode = nodes.getOrDefault(key, new Node(word, mainlanguage));
+        nodes.remove(key, mainnode);
+
+        // create or retrieve the translation nodes and add them as neighbors of the English node
+        for (String translation : translations) {
+            key = translation + "-" + language;
+            Node translationNode = nodes.getOrDefault(key, new Node(translation, language));
+            nodes.remove(key, translationNode);
+        }
+
+    }
+
+
+
+
+
     public ArrayList<String> getTranslations(String word, String mainlanguage, String language) {
         // find the main node and look for its neighbors in the specified language
         String key = word +"-"+mainlanguage;

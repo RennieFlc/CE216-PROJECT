@@ -18,6 +18,9 @@ import java.util.ResourceBundle;
 public class GUIedit implements Initializable {
     @FXML
     public ChoiceBox<String> myChoiceBox;
+
+    @FXML
+    public TextField editNewWordTextField;
     @FXML
     public Button editButton;
     @FXML
@@ -84,6 +87,9 @@ public class GUIedit implements Initializable {
             addtext5.setVisible(true);
             addtext6.setVisible(true);
             saveButton.setVisible(true);
+            editNewWordTextField.setVisible(true);
+            editNewWordTextField.setText(wordTextField.getText());
+            saveButton.setVisible(true);
             flagImage1.setImage(imageTurkish);
             flagImage2.setImage(imageGerman);
             flagImage3.setImage(imageGreek);
@@ -143,6 +149,9 @@ public class GUIedit implements Initializable {
             addtext5.setVisible(true);
             addtext6.setVisible(true);
             saveButton.setVisible(true);
+            editNewWordTextField.setVisible(true);
+            editNewWordTextField.setText(wordTextField.getText());
+            saveButton.setVisible(true);
             flagImage1.setImage(imageEnglish);
             flagImage2.setImage(imageGerman);
             flagImage3.setImage(imageGreek);
@@ -199,6 +208,9 @@ public class GUIedit implements Initializable {
             addtext4.setVisible(true);
             addtext5.setVisible(true);
             addtext6.setVisible(true);
+            saveButton.setVisible(true);
+            editNewWordTextField.setVisible(true);
+            editNewWordTextField.setText(wordTextField.getText());
             saveButton.setVisible(true);
             flagImage1.setImage(imageTurkish);
             flagImage2.setImage(imageGerman);
@@ -262,12 +274,16 @@ public class GUIedit implements Initializable {
             addtext5.setVisible(true);
             addtext6.setVisible(true);
             saveButton.setVisible(true);
+            editNewWordTextField.setVisible(true);
+            editNewWordTextField.setText(wordTextField.getText());
+            saveButton.setVisible(true);
             flagImage1.setImage(imageTurkish);
             flagImage2.setImage(imageGerman);
             flagImage3.setImage(imageGreek);
             flagImage4.setImage(imageSwedish);
             flagImage5.setImage(imageFrench);
             flagImage6.setImage(imageEnglish);
+
 
             List<String> translationsturk = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Turkish");
             List<String> translationsger = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"German");
@@ -318,6 +334,9 @@ public class GUIedit implements Initializable {
             addtext4.setVisible(true);
             addtext5.setVisible(true);
             addtext6.setVisible(true);
+            saveButton.setVisible(true);
+            editNewWordTextField.setVisible(true);
+            editNewWordTextField.setText(wordTextField.getText());
             saveButton.setVisible(true);
             flagImage1.setImage(imageTurkish);
             flagImage2.setImage(imageGerman);
@@ -377,12 +396,16 @@ public class GUIedit implements Initializable {
             addtext5.setVisible(true);
             addtext6.setVisible(true);
             saveButton.setVisible(true);
+            editNewWordTextField.setVisible(true);
+            editNewWordTextField.setText(wordTextField.getText());
+            saveButton.setVisible(true);
             flagImage1.setImage(imageTurkish);
             flagImage2.setImage(imageGerman);
             flagImage3.setImage(imageGreek);
             flagImage4.setImage(imageSwedish);
             flagImage5.setImage(imageEnglish);
             flagImage6.setImage(imageItalian);
+
 
             List<String> translationsturk = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Turkish");
             List<String> translationsger = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"German");
@@ -434,6 +457,9 @@ public class GUIedit implements Initializable {
             addtext5.setVisible(true);
             addtext6.setVisible(true);
             saveButton.setVisible(true);
+            editNewWordTextField.setVisible(true);
+            editNewWordTextField.setText(wordTextField.getText());
+            saveButton.setVisible(true);
             flagImage1.setImage(imageTurkish);
             flagImage2.setImage(imageEnglish);
             flagImage3.setImage(imageGreek);
@@ -484,14 +510,16 @@ public class GUIedit implements Initializable {
             addtext6.setText(sbsita.toString());
 
         }
-
-
-
-
-
     }
     public void enterEditWorForm(ActionEvent event) throws  IOException {
         if (getLanguage().equals("English")) {
+            Dictionary.graph.deleteWord(wordTextField.getText(),"English","Turkish",Dictionary.graph.getTranslations(wordTextField.getText(),"English","Turkish"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"English","German",Dictionary.graph.getTranslations(wordTextField.getText(),"English","German"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"English","Modern Greek",Dictionary.graph.getTranslations(wordTextField.getText(),"English","Modern Greek"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"English","Swedish",Dictionary.graph.getTranslations(wordTextField.getText(),"English","Swedish"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"English","French",Dictionary.graph.getTranslations(wordTextField.getText(),"English","French"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"English","Italian",Dictionary.graph.getTranslations(wordTextField.getText(),"English","Italian"));
+
             System.out.println(wordTextField.getText());
             ArrayList<String> turkishtranslate = new ArrayList<>();
             ArrayList<String>germantranslate = new ArrayList<>();
@@ -507,16 +535,23 @@ public class GUIedit implements Initializable {
             italiantranslate.add(addtext6.getText());
 
             if (saveButton.isDisabled() == false) {
-                Dictionary.graph.addWord(wordTextField.getText(),"English","Turkish",turkishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"English","German",germantranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"English","Modern Greek",moderngtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"English","Swedish",swedishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"English","French",frenchtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"English","Italian",italiantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"English","Turkish",turkishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"English","German",germantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"English","Modern Greek",moderngtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"English","Swedish",swedishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"English","French",frenchtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"English","Italian",italiantranslate);
             }
         }
         if (getLanguage().equals("Turkish")) {
             System.out.println(wordTextField.getText());
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Turkish","English",Dictionary.graph.getTranslations(wordTextField.getText(),"Turkish","English"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Turkish","German",Dictionary.graph.getTranslations(wordTextField.getText(),"Turkish","Modern Greek"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Turkish","Modern Greek",Dictionary.graph.getTranslations(wordTextField.getText(),"Turkish","Modern Greek"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Turkish","Swedish",Dictionary.graph.getTranslations(wordTextField.getText(),"Turkish","Swedish"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Turkish","French",Dictionary.graph.getTranslations(wordTextField.getText(),"Turkish","French"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Turkish","Italian",Dictionary.graph.getTranslations(wordTextField.getText(),"Turkish","Italian"));
+
             ArrayList<String>englishtranslate = new ArrayList<>();
             ArrayList<String>germantranslate = new ArrayList<>();
             ArrayList<String>moderngtranslate = new ArrayList<>();
@@ -531,12 +566,12 @@ public class GUIedit implements Initializable {
             italiantranslate.add(addtext6.getText());
 
             if (saveButton.isDisabled() == false) {
-                Dictionary.graph.addWord(wordTextField.getText(),"Turkish","English",englishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Turkish","German",germantranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Turkish","Modern Greek",moderngtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Turkish","Swedish",swedishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Turkish","French",frenchtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Turkish","Italian",italiantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Turkish","English",englishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Turkish","German",germantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Turkish","Modern Greek",moderngtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Turkish","Swedish",swedishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Turkish","French",frenchtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Turkish","Italian",italiantranslate);
             }
         }
         if (getLanguage().equals("Swedish")) {
@@ -547,6 +582,13 @@ public class GUIedit implements Initializable {
             ArrayList<String>englishtranslate = new ArrayList<>();
             ArrayList<String>frenchtranslate = new ArrayList<>();
             ArrayList<String>italiantranslate = new ArrayList<>();
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Swedish","English",Dictionary.graph.getTranslations(wordTextField.getText(),"Swedish","English"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Swedish","German",Dictionary.graph.getTranslations(wordTextField.getText(),"Swedish","German"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Swedish","Modern Greek",Dictionary.graph.getTranslations(wordTextField.getText(),"Swedish","Modern Greek"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Swedish","Turkish",Dictionary.graph.getTranslations(wordTextField.getText(),"Swedish","Turkish"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Swedish","French",Dictionary.graph.getTranslations(wordTextField.getText(),"Swedish","French"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Swedish","Italian",Dictionary.graph.getTranslations(wordTextField.getText(),"Swedish","Italian"));
+
             turkishtranslate.add(addtext1.getText());
             germantranslate.add(addtext2.getText());
             moderngtranslate.add(addtext3.getText());
@@ -555,12 +597,12 @@ public class GUIedit implements Initializable {
             italiantranslate.add(addtext6.getText());
 
             if (saveButton.isDisabled() == false) {
-                Dictionary.graph.addWord(wordTextField.getText(),"Swedish","Turkish",turkishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Swedish","German",germantranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Swedish","Modern Greek",moderngtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Swedish","English",englishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Swedish","French",frenchtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Swedish","Italian",italiantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Swedish","Turkish",turkishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Swedish","German",germantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Swedish","Modern Greek",moderngtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Swedish","English",englishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Swedish","French",frenchtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Swedish","Italian",italiantranslate);
             }
         }
         if (getLanguage().equals("Italian")) {
@@ -571,6 +613,13 @@ public class GUIedit implements Initializable {
             ArrayList<String>swedishtranslate = new ArrayList<>();
             ArrayList<String>frenchtranslate = new ArrayList<>();
             ArrayList<String>englishtranslate = new ArrayList<>();
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Italian","English",Dictionary.graph.getTranslations(wordTextField.getText(),"Italian","English"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Italian","German",Dictionary.graph.getTranslations(wordTextField.getText(),"Italian","German"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Italian","Modern Greek",Dictionary.graph.getTranslations(wordTextField.getText(),"Italian","Modern Greek"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Italian","Turkish",Dictionary.graph.getTranslations(wordTextField.getText(),"Italian","Turkish"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Italian","French",Dictionary.graph.getTranslations(wordTextField.getText(),"Italian","French"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Italian","Swedish",Dictionary.graph.getTranslations(wordTextField.getText(),"Italian","Swedish"));
+
             turkishtranslate.add(addtext1.getText());
             germantranslate.add(addtext2.getText());
             moderngtranslate.add(addtext3.getText());
@@ -579,12 +628,12 @@ public class GUIedit implements Initializable {
             englishtranslate.add(addtext6.getText());
 
             if (saveButton.isDisabled() == false) {
-                Dictionary.graph.addWord(wordTextField.getText(),"Italian","Turkish",turkishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Italian","German",germantranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Italian","Modern Greek",moderngtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Italian","Swedish",swedishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Italian","French",frenchtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Italian","English",englishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Italian","Turkish",turkishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Italian","German",germantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Italian","Modern Greek",moderngtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Italian","Swedish",swedishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Italian","French",frenchtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Italian","English",englishtranslate);
             }
         }
         if (getLanguage().equals("Modern Greek")) {
@@ -595,6 +644,13 @@ public class GUIedit implements Initializable {
             ArrayList<String>swedishtranslate = new ArrayList<>();
             ArrayList<String>frenchtranslate = new ArrayList<>();
             ArrayList<String>italiantranslate = new ArrayList<>();
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Modern Greek","English",Dictionary.graph.getTranslations(wordTextField.getText(),"Modern Greek","English"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Modern Greek","German",Dictionary.graph.getTranslations(wordTextField.getText(),"Modern Greek","German"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Modern Greek","Italian",Dictionary.graph.getTranslations(wordTextField.getText(),"Modern Greek","Italian"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Modern Greek","Turkish",Dictionary.graph.getTranslations(wordTextField.getText(),"Modern Greek","Turkish"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Modern Greek","French",Dictionary.graph.getTranslations(wordTextField.getText(),"Modern Greek","French"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"Modern Greek","Swedish",Dictionary.graph.getTranslations(wordTextField.getText(),"Modern Greek","Swedish"));
+
             turkishtranslate.add(addtext1.getText());
             germantranslate.add(addtext2.getText());
             englishtranslate.add(addtext3.getText());
@@ -603,16 +659,23 @@ public class GUIedit implements Initializable {
             italiantranslate.add(addtext6.getText());
 
             if (saveButton.isDisabled() == false) {
-                Dictionary.graph.addWord(wordTextField.getText(),"Modern Greek","Turkish",turkishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Modern Greek","German",germantranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Modern Greek","English",englishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Modern Greek","Swedish",swedishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Modern Greek","French",frenchtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"Modern Greek","Italian",italiantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Modern Greek","Turkish",turkishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Modern Greek","German",germantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Modern Greek","English",englishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Modern Greek","Swedish",swedishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Modern Greek","French",frenchtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"Modern Greek","Italian",italiantranslate);
             }
         }
         if (getLanguage().equals("French")) {
             System.out.println(wordTextField.getText());
+            Dictionary.graph.deleteWord(wordTextField.getText(),"French","English",Dictionary.graph.getTranslations(wordTextField.getText(),"French","English"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"French","German",Dictionary.graph.getTranslations(wordTextField.getText(),"French","German"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"French","Italian",Dictionary.graph.getTranslations(wordTextField.getText(),"French","Italian"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"French","Turkish",Dictionary.graph.getTranslations(wordTextField.getText(),"French","Turkish"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"French","Modern Greek",Dictionary.graph.getTranslations(wordTextField.getText(),"French","Modern Greek"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"French","Swedish",Dictionary.graph.getTranslations(wordTextField.getText(),"French","Swedish"));
+
             ArrayList<String>turkishtranslate = new ArrayList<>();
             ArrayList<String>germantranslate = new ArrayList<>();
             ArrayList<String>moderngtranslate = new ArrayList<>();
@@ -627,16 +690,23 @@ public class GUIedit implements Initializable {
             italiantranslate.add(addtext6.getText());
 
             if (saveButton.isDisabled() == false) {
-                Dictionary.graph.addWord(wordTextField.getText(),"French","Turkish",turkishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"French","German",germantranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"French","Modern Greek",moderngtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"French","Swedish",swedishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"French","English",englishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"French","Italian",italiantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"French","Turkish",turkishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"French","German",germantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"French","Modern Greek",moderngtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"French","Swedish",swedishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"French","English",englishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"French","Italian",italiantranslate);
             }
         }
         if (getLanguage().equals("German")) {
             System.out.println(wordTextField.getText());
+            Dictionary.graph.deleteWord(wordTextField.getText(),"German","English",Dictionary.graph.getTranslations(wordTextField.getText(),"German","English"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"German","French",Dictionary.graph.getTranslations(wordTextField.getText(),"German","French"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"German","Italian",Dictionary.graph.getTranslations(wordTextField.getText(),"German","Italian"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"German","Turkish",Dictionary.graph.getTranslations(wordTextField.getText(),"German","Turkish"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"German","Modern Greek",Dictionary.graph.getTranslations(wordTextField.getText(),"German","Modern Greek"));
+            Dictionary.graph.deleteWord(wordTextField.getText(),"German","Swedish",Dictionary.graph.getTranslations(wordTextField.getText(),"German","Swedish"));
+
             ArrayList<String>turkishtranslate = new ArrayList<>();
             ArrayList<String>englishtranslate = new ArrayList<>();
             ArrayList<String>moderngtranslate = new ArrayList<>();
@@ -651,12 +721,12 @@ public class GUIedit implements Initializable {
             italiantranslate.add(addtext6.getText());
 
             if (saveButton.isDisabled() == false) {
-                Dictionary.graph.addWord(wordTextField.getText(),"German","Turkish",turkishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"German","English",englishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"German","Modern Greek",moderngtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"German","Swedish",swedishtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"German","French",frenchtranslate);
-                Dictionary.graph.addWord(wordTextField.getText(),"German","Italian",italiantranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"German","Turkish",turkishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"German","English",englishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"German","Modern Greek",moderngtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"German","Swedish",swedishtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"German","French",frenchtranslate);
+                Dictionary.graph.addWord(editNewWordTextField.getText(),"German","Italian",italiantranslate);
             }
         }
 
