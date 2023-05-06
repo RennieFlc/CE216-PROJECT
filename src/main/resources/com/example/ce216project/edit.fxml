@@ -2,23 +2,21 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ce216project.GUIedit">
    <top>
-      <VBox BorderPane.alignment="CENTER">
+      <VBox prefHeight="533.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <HBox prefHeight="61.0" prefWidth="600.0">
                <children>
-                  <TextField fx:id="editTextField" prefHeight="25.0" prefWidth="207.0" promptText="Enter the word you want to edit..." />
-                  <ChoiceBox fx:id="editChoiceBox" prefWidth="150.0" />
-                  <Button fx:id="editShowTranslationsButton" mnemonicParsing="false" text="Show Translations" />
+                  <TextField fx:id="wordTextField" prefHeight="26.0" prefWidth="210.0" promptText="Enter the word you want to edit..." />
+                  <ChoiceBox fx:id="myChoiceBox" prefHeight="26.0" prefWidth="167.0" />
+                  <Button fx:id="editButton" mnemonicParsing="false" onAction="#displayEditWordForm" text="Show Translations" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
@@ -27,18 +25,44 @@
                   <Button fx:id="editEditButton" mnemonicParsing="false" text="Edit" />
                </children>
             </HBox>
+            <HBox prefHeight="23.0" prefWidth="590.0">
+               <children>
+                  <TextField fx:id="addtext1" prefHeight="26.0" prefWidth="414.0" />
+                  <ImageView fx:id="flagImage1" fitHeight="40.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="23.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="addtext2" prefHeight="26.0" prefWidth="414.0" visible="false" />
+                  <ImageView fx:id="flagImage2" fitHeight="40.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="28.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="addtext3" prefHeight="26.0" prefWidth="414.0" visible="false" />
+                  <ImageView fx:id="flagImage3" fitHeight="40.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="19.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="addtext4" prefHeight="26.0" prefWidth="414.0" visible="false" />
+                  <ImageView fx:id="flagImage4" fitHeight="40.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="addtext5" prefHeight="26.0" prefWidth="414.0" visible="false" />
+                  <ImageView fx:id="flagImage5" fitHeight="40.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="addtext6" prefHeight="26.0" prefWidth="414.0" visible="false" />
+                  <ImageView fx:id="flagImage6" fitHeight="40.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <Button fx:id="saveButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="68.0" text="Save" />
          </children>
       </VBox>
    </top>
-   <right>
-      <ScrollPane fx:id="editScrollPane" prefHeight="239.0" prefWidth="601.0" BorderPane.alignment="CENTER">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="227.0" prefWidth="601.0">
-               <children>
-                  <Label fx:id="editTranslationsLabel" layoutX="273.0" layoutY="6.0" text="Translations" />
-               </children>
-            </AnchorPane>
-        </content>
-      </ScrollPane>
-   </right>
 </BorderPane>

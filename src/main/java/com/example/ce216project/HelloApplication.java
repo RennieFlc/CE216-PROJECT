@@ -20,8 +20,6 @@ public class HelloApplication extends Application {
         stage.setMinWidth(400);
         stage.setMinHeight(400);
         stage.show();
-
-
     }
     public static void main (String[]args){
 
