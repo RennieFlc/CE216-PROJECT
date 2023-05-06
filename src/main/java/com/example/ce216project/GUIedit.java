@@ -96,15 +96,43 @@ public class GUIedit implements Initializable {
             List<String> translationssw = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Swedish");
             List<String> translationsfr = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"French");
             List<String> translationsita = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Italian");
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sbtr = new StringBuilder();
             for (String translation : translationstr) {
-                sb.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+                sbtr.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
             }
-            addtext1.setText(sb.toString());
+            addtext1.setText(sbtr.toString());
+
+            StringBuilder sbger = new StringBuilder();
             for (String translation : translationsger) {
-                sb.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+                sbger.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
             }
-            addtext2.setText(sb.toString());
+            addtext2.setText(sbger.toString());
+
+            StringBuilder sbsmd = new StringBuilder();
+            for (String translation : translationsmd) {
+                sbsmd.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext3.setText(sbsmd.toString());
+
+            StringBuilder sbssw= new StringBuilder();
+            for (String translation : translationssw) {
+                sbssw.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext4.setText(sbssw.toString());
+
+            StringBuilder sbsfr= new StringBuilder();
+            for (String translation : translationsfr) {
+                sbsfr.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext5.setText(sbsfr.toString());
+
+            StringBuilder sbsita= new StringBuilder();
+            for (String translation : translationsita) {
+                sbsita.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext6.setText(sbsita.toString());
+
+
 
         }
         if (getLanguage().equals("Turkish")) {
@@ -121,6 +149,48 @@ public class GUIedit implements Initializable {
             flagImage4.setImage(imageSwedish);
             flagImage5.setImage(imageFrench);
             flagImage6.setImage(imageItalian);
+
+            List<String> translationseng = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"English");
+            List<String> translationsger = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"German");
+            List<String> translationsmd = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Modern Greek");
+            List<String> translationssw = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Swedish");
+            List<String> translationsfr = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"French");
+            List<String> translationsita = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Italian");
+            StringBuilder sbeng = new StringBuilder();
+            for (String translation : translationseng) {
+                sbeng.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext1.setText(sbeng.toString());
+
+            StringBuilder sbeger = new StringBuilder();
+            for (String translation : translationsger) {
+                sbeger.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext2.setText(sbeger.toString());
+
+            StringBuilder sbesmd = new StringBuilder();
+            for (String translation : translationsmd) {
+                sbesmd.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext3.setText(sbesmd.toString());
+
+            StringBuilder sbessw = new StringBuilder();
+            for (String translation : translationssw) {
+                sbessw.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext4.setText(sbessw.toString());
+
+            StringBuilder sbefr = new StringBuilder();
+            for (String translation : translationsfr) {
+                sbefr.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext5.setText(sbefr.toString());
+
+            for (String translation : translationsita) {
+                sbefr.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext6.setText(sbefr.toString());
+
         }
         if (getLanguage().equals("Swedish")) {
             addtext1.setVisible(true);
@@ -137,6 +207,52 @@ public class GUIedit implements Initializable {
             flagImage5.setImage(imageFrench);
             flagImage6.setImage(imageItalian);
 
+            List<String> translationsturk = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Turkish");
+            List<String> translationsger = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"German");
+            List<String> translationsmd = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Modern Greek");
+            List<String> translationseng = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"English");
+            List<String> translationsfr = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"French");
+            List<String> translationsita = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Italian");
+            StringBuilder sbtur = new StringBuilder();
+            for (String translation : translationsturk) {
+                sbtur.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext1.setText(sbtur.toString());
+
+            StringBuilder sbger = new StringBuilder();
+            for (String translation : translationsger) {
+                sbger.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext2.setText(sbger.toString());
+
+            StringBuilder sbsmd = new StringBuilder();
+            for (String translation : translationsmd) {
+                sbsmd.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext3.setText(sbsmd.toString());
+
+            StringBuilder sbseng = new StringBuilder();
+            for (String translation : translationseng) {
+                sbseng.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext4.setText(sbseng.toString());
+
+            StringBuilder sbsfr = new StringBuilder();
+            for (String translation : translationsfr) {
+                sbsfr.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext5.setText(sbsfr.toString());
+
+            StringBuilder sbsita = new StringBuilder();
+            for (String translation : translationsita) {
+                sbsita.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext6.setText(sbsita.toString());
+
+
+
+
+
         }
         if (getLanguage().equals("Italian")) {
             addtext1.setVisible(true);
@@ -152,6 +268,48 @@ public class GUIedit implements Initializable {
             flagImage4.setImage(imageSwedish);
             flagImage5.setImage(imageFrench);
             flagImage6.setImage(imageEnglish);
+
+            List<String> translationsturk = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Turkish");
+            List<String> translationsger = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"German");
+            List<String> translationsmd = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Modern Greek");
+            List<String> translationsswe = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"English");
+            List<String> translationsfr = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"French");
+            List<String> translationseng = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Italian");
+            StringBuilder sbtur = new StringBuilder();
+            for (String translation : translationsturk) {
+                sbtur.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext1.setText(sbtur.toString());
+            for (String translation : translationsger) {
+                sbtur.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext2.setText(sbtur.toString());
+
+            StringBuilder sbsmd = new StringBuilder();
+            for (String translation : translationsmd) {
+                sbsmd.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext3.setText(sbsmd.toString());
+
+            StringBuilder sbsswe = new StringBuilder();
+            for (String translation : translationsswe) {
+                sbsswe.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext4.setText(sbsswe.toString());
+
+            StringBuilder sbsfr = new StringBuilder();
+            for (String translation : translationsfr) {
+                sbsfr.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext5.setText(sbsfr.toString());
+
+            StringBuilder sbseng = new StringBuilder();
+            for (String translation : translationseng) {
+                sbseng.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext6.setText(sbseng.toString());
+
+
         }
         if (getLanguage().equals("Modern Greek")) {
             addtext1.setVisible(true);
@@ -167,6 +325,49 @@ public class GUIedit implements Initializable {
             flagImage4.setImage(imageSwedish);
             flagImage5.setImage(imageFrench);
             flagImage6.setImage(imageItalian);
+
+            List<String> translationsturk = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Turkish");
+            List<String> translationsger = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"German");
+            List<String> translationeng = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Modern Greek");
+            List<String> translationsswe = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"English");
+            List<String> translationsfr = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"French");
+            List<String> translationsita = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Italian");
+            StringBuilder sbtur = new StringBuilder();
+            for (String translation : translationsturk) {
+                sbtur.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext1.setText(sbtur.toString());
+
+            StringBuilder sbger = new StringBuilder();
+            for (String translation : translationsger) {
+                sbger.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext2.setText(sbger.toString());
+
+            StringBuilder sbeng = new StringBuilder();
+            for (String translation : translationeng) {
+                sbeng.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext3.setText(sbeng.toString());
+
+            StringBuilder sbeswe = new StringBuilder();
+            for (String translation : translationsswe) {
+                sbeswe.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext4.setText(sbeswe.toString());
+
+            StringBuilder sbefr = new StringBuilder();
+            for (String translation : translationsfr) {
+                sbefr.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext5.setText(sbefr.toString());
+
+            StringBuilder sbeita = new StringBuilder();
+            for (String translation : translationsita) {
+                sbeita.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext6.setText(sbeita.toString());
+
         }
         if (getLanguage().equals("French")) {
             addtext1.setVisible(true);
@@ -182,6 +383,48 @@ public class GUIedit implements Initializable {
             flagImage4.setImage(imageSwedish);
             flagImage5.setImage(imageEnglish);
             flagImage6.setImage(imageItalian);
+
+            List<String> translationsturk = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Turkish");
+            List<String> translationsger = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"German");
+            List<String> translationmg = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Modern Greek");
+            List<String> translationsswe = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"English");
+            List<String> translationseng = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"French");
+            List<String> translationsita = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Italian");
+            StringBuilder sbtur = new StringBuilder();
+            for (String translation : translationsturk) {
+                sbtur.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext1.setText(sbtur.toString());
+
+            StringBuilder sbger = new StringBuilder();
+            for (String translation : translationsger) {
+                sbger.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext2.setText(sbger.toString());
+
+            StringBuilder sbmg = new StringBuilder();
+            for (String translation : translationmg) {
+                sbmg.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext3.setText(sbmg.toString());
+
+            StringBuilder sbswe = new StringBuilder();
+            for (String translation : translationsswe) {
+                sbswe.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext4.setText(sbswe.toString());
+
+            StringBuilder sbseng = new StringBuilder();
+            for (String translation : translationseng) {
+                sbseng.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext5.setText(sbseng.toString());
+
+            StringBuilder sbsita = new StringBuilder();
+            for (String translation : translationsita) {
+                sbsita.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext6.setText(sbsita.toString());
         }
         if (getLanguage().equals("German")) {
             addtext1.setVisible(true);
@@ -197,6 +440,49 @@ public class GUIedit implements Initializable {
             flagImage4.setImage(imageSwedish);
             flagImage5.setImage(imageFrench);
             flagImage6.setImage(imageItalian);
+
+            List<String> translationsturk = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Turkish");
+            List<String> translationseng = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"German");
+            List<String> translationmg = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Modern Greek");
+            List<String> translationsswe = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"English");
+            List<String> translationsfr = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"French");
+            List<String> translationsita = Dictionary.graph.getTranslations(wordTextField.getText(),getLanguage(),"Italian");
+            StringBuilder sbtur = new StringBuilder();
+            for (String translation : translationsturk) {
+                sbtur.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext1.setText(sbtur.toString());
+
+            StringBuilder sbseng = new StringBuilder();
+            for (String translation : translationseng) {
+                sbseng.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext2.setText(sbseng.toString());
+
+            StringBuilder sbsemg = new StringBuilder();
+            for (String translation : translationmg) {
+                sbsemg.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext3.setText(sbsemg.toString());
+
+            StringBuilder sbsswe = new StringBuilder();
+            for (String translation : translationsswe) {
+                sbsswe.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext4.setText(sbsswe.toString());
+
+            StringBuilder sbsfr = new StringBuilder();
+            for (String translation : translationsfr) {
+                sbsfr.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext5.setText(sbsfr.toString());
+
+            StringBuilder sbsita = new StringBuilder();
+            for (String translation : translationsita) {
+                sbsita.append(translation).append("\n"); // Add each translation to the StringBuilder with a line break
+            }
+            addtext6.setText(sbsita.toString());
+
         }
 
 
