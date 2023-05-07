@@ -12,6 +12,9 @@ public class Dictionary implements Serializable {
 
     public Language lang;
     public static Graph graph = new Graph();
+
+    //private static final String THESAURUS_API_KEY = "";
+    //private static final String THESAURUS_API_URL = "https://freedict.org/freedict-database.json";
     public void readDictFile()
     {
 
@@ -43,6 +46,7 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close();
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("eng-tur.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -52,6 +56,20 @@ public class Dictionary implements Serializable {
                     System.out.println("Serialized data is saved in eng-tur.ser");
                 } catch (IOException i) {
                     i.printStackTrace();
+                }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("eng-tur.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph1 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from eng-tur.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
                 }
             }
 
@@ -95,6 +113,7 @@ public class Dictionary implements Serializable {
                     }
                 }
                 scanner.close();
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("eng-ita.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -104,6 +123,20 @@ public class Dictionary implements Serializable {
                     System.out.println("Serialized data is saved in eng-ita.ser");
                 } catch (IOException i) {
                     i.printStackTrace();
+                }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("eng-ita.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph2 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from eng-ita.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -147,6 +180,7 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("eng-fra.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -156,6 +190,20 @@ public class Dictionary implements Serializable {
                     System.out.println("Serialized data is saved in eng-fra.ser");
                 } catch (IOException i) {
                     i.printStackTrace();
+                }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("eng-fra.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph3 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from eng-fra.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -199,6 +247,7 @@ public class Dictionary implements Serializable {
                     }
                 }
                 scanner.close();
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("ell-ita.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -208,6 +257,20 @@ public class Dictionary implements Serializable {
                     System.out.println("Serialized data is saved in ell-ita.ser");
                 } catch (IOException i) {
                     i.printStackTrace();
+                }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("ell-ita.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph4 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from ell-ita.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -257,6 +320,19 @@ public class Dictionary implements Serializable {
                 } catch (IOException i) {
                     i.printStackTrace();
                 }
+                try {
+                    FileInputStream fileIn = new FileInputStream("ell-swe.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph5 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from ell-swe.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
+                }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -298,6 +374,7 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("ell-eng.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -307,6 +384,20 @@ public class Dictionary implements Serializable {
                     System.out.println("Serialized data is saved in ell-eng.ser");
                 } catch (IOException i) {
                     i.printStackTrace();
+                }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("ell-eng.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph6 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from ell-eng.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -350,6 +441,7 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("ell-fra.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -359,6 +451,20 @@ public class Dictionary implements Serializable {
                     System.out.println("Serialized data is saved in ell-fra.ser");
                 } catch (IOException i) {
                     i.printStackTrace();
+                }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("ell-fra.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph7 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from ell-fra.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -406,6 +512,7 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("ita-eng.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -415,6 +522,20 @@ public class Dictionary implements Serializable {
                     System.out.println("Serialized data is saved in ita-eng.ser");
                 } catch (IOException i) {
                     i.printStackTrace();
+                }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("ita-eng.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph8 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from ita-eng.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -455,6 +576,7 @@ public class Dictionary implements Serializable {
                     }
                 }
                 scanner.close();
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("ita-deu.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -465,6 +587,21 @@ public class Dictionary implements Serializable {
                 } catch (IOException i) {
                     i.printStackTrace();
                 }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("ita-deu.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph9 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from ita-deu.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
+                }
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -504,6 +641,7 @@ public class Dictionary implements Serializable {
                     }
                 }
                 scanner.close();
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("ita-tur.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -514,6 +652,21 @@ public class Dictionary implements Serializable {
                 } catch (IOException i) {
                     i.printStackTrace();
                 }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("ita-tur.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph10 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from ita-tur.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
+                }
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -553,6 +706,7 @@ public class Dictionary implements Serializable {
                     }
                 }
                 scanner.close();
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("ita-swe.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -563,6 +717,21 @@ public class Dictionary implements Serializable {
                 } catch (IOException i) {
                     i.printStackTrace();
                 }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("ita-swe.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph11 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from ita-swe.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
+                }
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -602,6 +771,7 @@ public class Dictionary implements Serializable {
                     }
                 }
                 scanner.close();
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("ita-ell.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -612,6 +782,21 @@ public class Dictionary implements Serializable {
                 } catch (IOException i) {
                     i.printStackTrace();
                 }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("ita-ell.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph12 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from ita-ell.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
+                }
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -657,6 +842,7 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("deu-ita.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -667,6 +853,21 @@ public class Dictionary implements Serializable {
                 } catch (IOException i) {
                     i.printStackTrace();
                 }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("deu-ita.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph13 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from deu-ita.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
+                }
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -709,6 +910,7 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("deu-swe.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -719,6 +921,21 @@ public class Dictionary implements Serializable {
                 } catch (IOException i) {
                     i.printStackTrace();
                 }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("deu-swe.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph14 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from deu-swe.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
+                }
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -761,6 +978,7 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("deu-fra.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -771,6 +989,21 @@ public class Dictionary implements Serializable {
                 } catch (IOException i) {
                     i.printStackTrace();
                 }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("deu-fra.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph15 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from deu-fra.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
+                }
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -813,6 +1046,7 @@ public class Dictionary implements Serializable {
                 }
 
                 scanner.close(); // Close the scanner after reading the file
+
                 try {
                     FileOutputStream fileOut = new FileOutputStream("deu-ell.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -823,6 +1057,21 @@ public class Dictionary implements Serializable {
                 } catch (IOException i) {
                     i.printStackTrace();
                 }
+
+                try {
+                    FileInputStream fileIn = new FileInputStream("deu-ell.ser");
+                    ObjectInputStream in = new ObjectInputStream(fileIn);
+                    Graph graph16 = (Graph) in.readObject();
+                    in.close();
+                    fileIn.close();
+                    System.out.println("Deserialized data is read from deu-ell.ser");
+                } catch (IOException i){
+                    i.printStackTrace();
+                } catch (ClassNotFoundException c){
+                    System.out.println("Graph class not found");
+                    c.printStackTrace();
+                }
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
