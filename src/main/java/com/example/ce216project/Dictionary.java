@@ -868,7 +868,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("deu-eng.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in deu-eng.ser");
@@ -920,7 +920,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("deu-tur.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in deu-tur.ser");
@@ -975,7 +975,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("tur-deu.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in tur-deu.ser");
@@ -1027,7 +1027,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("tur-eng.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in tur-eng.ser");
@@ -1076,7 +1076,7 @@ public class Dictionary implements Serializable {
                     try {
                         FileOutputStream fileOut = new FileOutputStream("fra-tur.ser");
                         ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                        out.writeObject(this);
+                        out.writeObject(graph);
                         out.close();
                         fileOut.close();
                         System.out.println("Serialized data is saved in fra-tur.ser");
@@ -1133,7 +1133,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("fra-eng.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in fra-eng.ser");
@@ -1187,7 +1187,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("fra-swe.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in fra-swe.ser");
@@ -1237,7 +1237,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("fra-ita.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in fra-ita.ser");
@@ -1289,7 +1289,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("fra-deu.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in fra-deu.ser");
@@ -1341,7 +1341,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("fra-ell.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in fra-ell.ser");
@@ -1396,7 +1396,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("swe-deu.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in swe-deu.ser");
@@ -1448,7 +1448,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("swe-fra.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in swe-fra.ser");
@@ -1500,7 +1500,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("swe-ell.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in swe-ell.ser");
@@ -1552,7 +1552,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("swe-eng.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in swe-eng.ser");
@@ -1601,7 +1601,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("swe-tur (2).ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in swe-tur (2).ser");
@@ -1656,7 +1656,7 @@ public class Dictionary implements Serializable {
                 try {
                     FileOutputStream fileOut = new FileOutputStream("swe-ita.ser");
                     ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                    out.writeObject(this);
+                    out.writeObject(graph);
                     out.close();
                     fileOut.close();
                     System.out.println("Serialized data is saved in swe-ita.ser");
