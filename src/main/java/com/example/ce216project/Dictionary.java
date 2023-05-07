@@ -13,8 +13,6 @@ public class Dictionary implements Serializable {
     public Language lang;
     public static Graph graph = new Graph();
 
-    //private static final String THESAURUS_API_KEY = "";
-    //private static final String THESAURUS_API_URL = "https://freedict.org/freedict-database.json";
     public void readDictFile()
     {
 
